@@ -1,4 +1,4 @@
-# 1. lépés: bekérjük a vendégek számát
+# 1. lépés: bekérjük a vendégek számát PIPA
 # 2. lépés: megnézzük ez pontosan hány százalék az első kedvezményben
 # 3. lépés: megnézzük ez pontosan hány százalék a második kedvezményben
 # 4. lépés: megnézzük ez pontosan hány százalék a harmadik kedvezményben
@@ -20,3 +20,24 @@ def bekeres():
             print("1-nél nem kisebb és 100-nál nem nagyobb számot adj meg!")
 
     return diakok
+
+
+def csoportos_kedvezmeny(diakok_szama):
+    cskedvezmeny = None
+    if diakok_szama < 10:
+        cskedvezmeny = 0
+    elif diakok_szama < 20:
+        cskedvezmeny = 0.05
+    elif diakok_szama < 30:
+        cskedvezmeny = 0.08
+    elif diakok_szama < 41:
+        cskedvezmeny = 0.12
+    else:
+        cskedvezmeny = 0.14
+
+    return cskedvezmeny
+        
+    
+
+diakok_szama = bekeres()
+
